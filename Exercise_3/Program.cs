@@ -1,4 +1,5 @@
 ﻿TestingFindArithmeticalMeanOfParticularColumn();
+
 uint numberOfRows;
 try
 {
@@ -25,6 +26,10 @@ int[,] twoDimensionalArray = new int[numberOfRows, numberOfColumns];
 Fill2DArray(twoDimensionalArray);
 Print2DArray(twoDimensionalArray);
 
+/*Выбор пользователем пути решения задачи через консоль.
+Если пользователь ввел 1 - в консоль выводятся среднее арифметическое каждого столбца.
+Если пользователь ввел 2 - в консоль выводится просьба ввести номер столбца для вывода
+среднего арифметического чисел выбранного столбца*/
 uint exerciseSolutionWay;
 try
 {
