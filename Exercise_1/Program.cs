@@ -1,7 +1,7 @@
-﻿uint rowLength;
+﻿uint numberOfRows;
 try
 {
-    rowLength = GetNumber("Enter row length ");
+    numberOfRows = GetNumber("Enter number of rows: ");
 }
 catch(FormatException ex)
 {
@@ -9,17 +9,17 @@ catch(FormatException ex)
     return;
 }
 
-uint columnLength;
+uint numberOfColumns;
 try
 {
-    columnLength = GetNumber("Enter column length ");
+    numberOfColumns = GetNumber("Enter number of columns: ");
 }
 catch(FormatException ex)
 {
     Console.WriteLine(ex.Message);
     return;
 }
-double [,] twoDimensionalArray = new double[rowLength, columnLength];
+double [,] twoDimensionalArray = new double[numberOfRows, numberOfColumns];
 Fill2DArray(twoDimensionalArray);
 Print2DArray(twoDimensionalArray);
 
@@ -44,7 +44,7 @@ void Fill2DArray(double [,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i,j] = random.NextDouble();
+            array[i,j] = Convert.ToDouble(random.Next(-100, 101)) / 10;
         }
     }
 }
